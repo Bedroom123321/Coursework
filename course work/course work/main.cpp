@@ -12,8 +12,7 @@ int main()
 	int operation_number;
 	while (1)
 	{
-	  std::cout << "Number of visitors: "<< number_visitors << "\n\n"<< "1)Enter visitor data \n" << "2)Show visitor data \n" << "3)Change visitor name \n" << "4)Delete visitor data \n"; 
-	  std::cout << "Choose operation: ";
+	  std::cout << "Number of visitors: "<< number_visitors << "\n\n"<< "1)Enter visitor data \n" << "2)Show visitor data \n" << "3)Change visitor name \n" << "4)Delete visitor data \n" << "Choose operation: ";
 	  std::cin >> operation_number;
 	  std::cin.ignore();  
 	  system("cls");
@@ -38,6 +37,7 @@ int main()
 			  std::cout << i + 1 << '.';
 			  visitors[i].print();
 		  }
+
 		  std::cout << "Press enter to back to menu";
 		  std::cin.ignore();
 		  system("cls");
@@ -49,6 +49,9 @@ int main()
 	      std::cout << "Enter visitor's number to change name\n";
 		  int visitor_num;
 		  std::cin >> visitor_num;
+
+		  std::cout << "Visitor's name: ";
+		  visitors[visitor_num-1].print();
 		  visitors[visitor_num-1].chang_name();
 		  system("cls");
 	  }
