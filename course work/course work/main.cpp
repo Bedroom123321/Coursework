@@ -1,5 +1,6 @@
 #include <iostream> 
 #include "visitor.h"
+#include "functions.h"
 
 int main()
 {
@@ -20,13 +21,7 @@ int main()
 	  switch (operation_number)
 	  {
 	  case 1:
-		  std::cout << "Enter data of "<< number_visitors<<" visitors:\n";
-		  for (int i = 0; i < number_visitors; i++)
-		  {
-			  std::cout << i+1 << '.';
-			  visitors[i].entering_name();
-		  }
-		  system("cls"); 
+		  case1(number_visitors, visitors);
 	  break;
 
 	  case 2: 
