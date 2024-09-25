@@ -21,7 +21,10 @@ void visitor::chang_name()
 	name = new_name;
 }
 
-void delete_data(int number, visitor* array)
+void visitor:: delete_data(int number, int size, visitor* array)
 {
-
+	for (int i = number; i < size - 1; i++) 
+	{
+		array[i] = array[i + 1];
+	}
 }

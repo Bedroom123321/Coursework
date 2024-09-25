@@ -15,6 +15,6 @@ public:
 
 	void chang_name();
 
-	void delete_data(int number, visitor* array);
+	void delete_data(int number, int size, visitor* array);
 
 };

@@ -2,11 +2,6 @@
 #include "visitor.h"
 #include "functions.h"
 
-void delete_data(int number, visitor* array)
-{
-
-}
-
 int main()
 {
 	int number_visitors;
@@ -42,7 +37,7 @@ int main()
 			std::cout << "Enter visitor's number to delete data\n";
 			int visitor_num;
 			std::cin >> visitor_num;
-			delete_data(number_visitors, visitors);
+			visitors[visitor_num-1].delete_data(visitor_num, number_visitors, visitors);
 			system("cls");
 		}
 		break;
