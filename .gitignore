@@ -31,7 +31,8 @@
 *.out
 *.app
 
-/.vs
+x64/
+.vs/
 *.vcxproj
 *.filters
 *.user
