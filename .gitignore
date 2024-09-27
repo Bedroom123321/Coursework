@@ -31,6 +31,7 @@
 *.out
 *.app
 
+# Lab1
 x64/
 .vs/
 *.vcxproj

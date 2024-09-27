@@ -1,4 +1,4 @@
-#include "visitor.h" 
+#include "visitor_class.h" 
 #include <iostream> 
 
 void visitor::entering_name()

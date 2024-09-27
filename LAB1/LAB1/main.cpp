@@ -1,5 +1,5 @@
 #include <iostream> 
-#include "visitor.h"
+#include "visitor_class.h"
 #include "functions.h"
 
 int main()

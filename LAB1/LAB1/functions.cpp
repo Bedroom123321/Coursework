@@ -1,6 +1,6 @@
 #include <iostream> 
 #include "functions.h"
-#include "visitor.h"
+#include "visitor_class.h"
 
 void case1(int number, visitor* array)
 {
