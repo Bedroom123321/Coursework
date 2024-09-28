@@ -9,12 +9,11 @@ private:
 
 public:
 
-	void entering_name();
+	std::string get_name() const;//готово
 
-	void print();
+	void set_name(const std::string& vis_name);//работате
 
-	void chang_name();
+	void print_name();//готово
 
-	void delete_data(int number, int size, visitor* array);
 
 };

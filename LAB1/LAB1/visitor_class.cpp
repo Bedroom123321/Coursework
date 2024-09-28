@@ -1,30 +1,18 @@
-#include "visitor_class.h" 
 #include <iostream> 
+#include "visitor_class.h" 
 
-void visitor::entering_name()
+std::string visitor::get_name() const
 {
-	std::string vis_name;
-	std::cin >> vis_name;
+	return name;
+}
+
+void visitor::set_name(const std::string& vis_name)
+{
 	name = vis_name;
 }
 
-void visitor::print()
+void visitor:: print_name()
 {
-	std::cout << name << '\n';
+	std::cout << get_name();
 }
 
-void visitor::chang_name()
-{
-	std::cout << "New name: ";
-	std::string new_name;
-	std::cin >> new_name;
-	name = new_name;
-}
-
-void visitor:: delete_data(int number, int size, visitor* array)
-{
-	for (int i = number; i < size - 1; i++) 
-	{
-		array[i] = array[i + 1];
-	}
-}
