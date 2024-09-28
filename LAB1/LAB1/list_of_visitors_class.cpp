@@ -1,19 +1,19 @@
 #include <iostream> 
 #include "list_of_visitors_class.h" 
 
-void list_of_visitors:: add_data(const std::string& v_name)
+void list_of_visitors:: add_data(int& number, const std::string& v_name)
 {
-	visitors[0].set_name(v_name);
+	visitors[number].set_name(v_name);
 }
 
-void list_of_visitors:: print_data()
+void list_of_visitors:: print_data(int& number)
 {
-	visitors[0].print_name();
+	visitors[number].print_name();
 }
 
-void list_of_visitors:: chang_data(const std::string& new_name)
+void list_of_visitors:: chang_data(int& number, const std::string& new_name)
 {
-	visitors[0].set_name(new_name);
+	visitors[number].set_name(new_name);
 }
 
 void list_of_visitors:: delete_data()

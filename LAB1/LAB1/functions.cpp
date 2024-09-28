@@ -3,27 +3,42 @@
 
 void case1(list_of_visitors list)
 {
-	std::string vs_name;
 	std::cout << "Enter visitor's data:\n";
-	std::cin >> vs_name;
-	list.add_data(vs_name); 
+	for(int i=0;i<3;i++)
+	{
+		std::string vis_name;
+		std::cout << i+1 << ".";
+		std::cin >> vis_name;
+		list.add_data(i,vis_name);
+	}
 	system("cls");
 }
 
 void case2(list_of_visitors list)
 {
 	std::cout << "Visitor's data:\n";
-	list.print_data();
+	for (int i=0; i < 3; i++)
+	{
+		std::cout << i+1 << ".";
+		list.print_data(i);
+		std::cout <<"\n";
+	}
 	std::cin.ignore();
 	system("cls");
 }
 
 void case3(list_of_visitors list)
 {
-	std::cout << "Enter visitor's number to change name\n";
+	std::cout << "Choose visitor's nember: \n";
+	int num;
+	std::cin >> num;
+	--num;
+
+	std::cout << "Enter new name\n";
 	std::string new_name;
 	std::cin >> new_name;
-	list.chang_data(new_name); 
+
+	list.chang_data(num,new_name); 
 	system("cls");
 }
 

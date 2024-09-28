@@ -11,7 +11,7 @@ public:
 
 	std::string get_name() const;//готово
 
-	void set_name(const std::string& vis_name);//работате
+	void set_name(const std::string& vis_name);//готово
 
 	void print_name();//готово
 
