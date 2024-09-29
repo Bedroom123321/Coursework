@@ -1,13 +1,11 @@
 #include "list_of_visitors_class.h" 
 
-list_of_visitors::list_of_visitors():number_of_visitors (3), visitors(new visitor[number_of_visitors]){}
-
 void list_of_visitors:: add_data(const int&num,const string& v_name)
 {
 	visitors[num].set_name(v_name);
 }
 
-void list_of_visitors:: print_data(const int& number)
+void list_of_visitors:: print_data(const int& number) const
 {
 	visitors[number].print_name();
 }
