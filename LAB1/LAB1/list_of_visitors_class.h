@@ -1,25 +1,25 @@
 #pragma once
-#include <iostream> 
 #include "visitor_class.h" 
 
+using std::string;
 
 class list_of_visitors
 {
 private:
 
-	static const int number_of_visitors = 3;//временно
-	visitor* visitors = new visitor[number_of_visitors];  
+	int number_of_visitors;
+	visitor* visitors;  
 
 public:
 
-	void add_data(int& number, const std::string& v_name);//работает
+	list_of_visitors();
 
-	void print_data(int& number);//работает
+	void add_data(int& num, const string& v_name);//работает
 
-	void chang_data(int& number,const std::string& new_name);//работает
+	void print_data(int& number);//работает 
 
-	void delete_data();//не готово
+	void chang_data(int& number,const string& new_name);//работает
 
-	int get_number() const;//готово
+	void delete_data(int& number);//не готово
 
 };

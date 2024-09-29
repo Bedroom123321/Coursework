@@ -1,4 +1,3 @@
-#include <iostream> 
 #include "visitor_class.h" 
 
 std::string visitor::get_name() const
@@ -6,7 +5,7 @@ std::string visitor::get_name() const
 	return name;
 }
 
-void visitor::set_name(const std::string& vis_name)
+void visitor::set_name(const string& vis_name)
 {
 	name = vis_name;
 }

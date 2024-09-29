@@ -1,52 +1,66 @@
-#include <iostream> 
 #include "functions.h"
 
-void case1(list_of_visitors list)
+int num_glob = 0;
+
+void print_menu()
 {
-	std::cout << "Enter visitor's data:\n";
-	for(int i=0;i<3;i++)
-	{
-		std::string vis_name;
-		std::cout << i+1 << ".";
-		std::cin >> vis_name;
-		list.add_data(i,vis_name);
-	}
+	cout<< "1)Enter visitor data \n"
+		<< "2)Show visitor data \n"
+		<< "3)Change visitor name \n"
+		<< "4)Delete visitor data \n"
+		<< "Choose operation: ";
+}
+
+void case1_enter(list_of_visitors list)
+{
+	cout << "Enter visitor's data:\n";
+	string vis_name;
+	cin >> vis_name;
+	list.add_data(num_glob,vis_name);
+	num_glob++;
 	system("cls");
 }
 
-void case2(list_of_visitors list)
+void case2_show(list_of_visitors list)
 {
-	std::cout << "Visitor's data:\n";
-	for (int i=0; i < 3; i++)
+	cout << "Visitor's data:\n";
+	for (int i=0; i < num_glob; i++)
 	{
-		std::cout << i+1 << ".";
+		cout << i+1 << ".";
 		list.print_data(i);
-		std::cout <<"\n";
+		cout <<"\n";
 	}
-	std::cin.ignore();
+	cin.ignore();
 	system("cls");
 }
 
-void case3(list_of_visitors list)
+void case3_change(list_of_visitors list)
 {
-	std::cout << "Choose visitor's nember: \n";
-	int num;
-	std::cin >> num;
-	--num;
+	cout << "Enter visitor's number to change data\n";
+	int number; 
+	cin >> number; 
+	--number; 
 
-	std::cout << "Enter new name\n";
-	std::string new_name;
-	std::cin >> new_name;
+	cout << "Visitor's name: ";
+	list.print_data(number); 
+	cout << "\n"; 
 
-	list.chang_data(num,new_name); 
+	cout << "Enter new name: ";
+	string new_name;
+	cin >> new_name;
+
+	list.chang_data(number,new_name);
 	system("cls");
 }
 
-void case4()
+void case4_delete(list_of_visitors list)
 {
-	/*std::cout << "Enter visitor's number to delete data\n";
-	int visitor_num;
-	std::cin >> visitor_num;
-	visitors[visitor_num - 1].delete_data(visitor_num, number_visitors, visitors);
-	system("cls");*/
+	cout << "Enter visitor's number to delete data\n";
+	int vis_num;
+	cin >> vis_num;
+	--vis_num;
+
+	list.delete_data(vis_num);
+	num_glob--;
+	system("cls");
 }

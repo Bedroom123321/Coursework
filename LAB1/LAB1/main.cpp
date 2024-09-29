@@ -1,7 +1,10 @@
-#include <iostream> 
-#include "visitor_class.h"
+#include <iostream>
 #include "functions.h"
 #include "list_of_visitors_class.h" 
+
+using std::cout;
+using std::cin;
+using std::string;
 
 int main()
 {
@@ -10,37 +13,32 @@ int main()
 
 	while (1)
 	{
-		std::cout
-		<< "1)Enter visitor data \n" 
-		<< "2)Show visitor data \n" 
-		<< "3)Change visitor name \n" 
-		<< "4)Delete visitor data \n" 
-		<< "Choose operation: ";
+		print_menu();
 
-		std::cin >> operation_number;
-		std::cin.ignore();
+		cin >> operation_number;
+		cin.ignore();
 		system("cls");
 
 		switch (operation_number)
 		{
 		case 1:
-			case1(list);
+			case1_enter(list);
 			break;
 
 		case 2:
-			case2(list);
+			case2_show(list);
 		    break;
 
 		case 3:
-			case3(list);
+			case3_change(list);
 			break;
 
 		case 4:
-			/*case4();*/
+			case4_delete(list);
 			break;
 
 		default:
-			std::cout << "Enter correct number! \n\n";
+			cout << "Enter correct number! \n\n";
 			break;
 		}
 	}

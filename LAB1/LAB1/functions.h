@@ -1,8 +1,12 @@
 #pragma once
-#include "visitor_class.h"
 #include "list_of_visitors_class.h" 
 
-void case1(list_of_visitors list); 
-void case2(list_of_visitors list);
-void case3(list_of_visitors list);
-void case4();
+using std::cout;
+using std::cin;
+using std::string;
+
+void print_menu();
+void case1_enter(list_of_visitors list); 
+void case2_show(list_of_visitors list);
+void case3_change(list_of_visitors list);
+void case4_delete(list_of_visitors list);
