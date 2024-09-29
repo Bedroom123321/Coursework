@@ -34,6 +34,5 @@
 # Lab1
 x64/
 .vs/
-*.vcxproj
 *.filters
 *.user
