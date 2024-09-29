@@ -11,6 +11,8 @@ int main()
 	list_of_visitors list;
 	int operation_number;
 
+	int* bobr = new int[5] {1,2,3,4,5};
+	delete[] bobr;
 	while (true)
 	{
 		print_menu();
