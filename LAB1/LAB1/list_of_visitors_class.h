@@ -14,12 +14,12 @@ public:
 
 	list_of_visitors();
 
-	void add_data(int& num, const string& v_name);//работает
+	void add_data( const int& num, const string& v_name);//работает
 
-	void print_data(int& number);//работает 
+	void print_data(const int& number);//работает 
 
-	void chang_data(int& number,const string& new_name);//работает
+	void chang_data(const int& number,const string& new_name);//работает
 
-	void delete_data(int& number);//не готово
+	void delete_data(const int& number);//не готово
 
 };

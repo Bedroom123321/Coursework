@@ -15,7 +15,7 @@ public:
 
 	void set_name(const string& vis_name);//готово
 
-	void print_name();//готово
+	void print_name() const;//готово
 
 
 };

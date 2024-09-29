@@ -11,7 +11,7 @@ int main()
 	list_of_visitors list;
 	int operation_number;
 
-	while (1)
+	while (true)
 	{
 		print_menu();
 
@@ -42,5 +42,4 @@ int main()
 			break;
 		}
 	}
-	return 0;
 }
