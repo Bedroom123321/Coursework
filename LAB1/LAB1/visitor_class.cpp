@@ -5,8 +5,6 @@ std::string visitor::get_name() const
 	return name;
 }
 
-visitor::visitor(const string& vis_name): name(vis_name){}
-
 void visitor :: set_name(const string& vis_name)
 {
 	name = vis_name;

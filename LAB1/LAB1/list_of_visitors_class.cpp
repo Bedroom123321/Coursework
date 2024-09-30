@@ -21,7 +21,7 @@ void list_of_visitors:: delete_data(const int& number)
 	visitors.erase(iter + number - 1);
 }
 
-size_t list_of_visitors::size_visitors()
+size_t list_of_visitors::size_visitors() const
 {
 	return visitors.size();
 }

@@ -21,5 +21,5 @@ public:
 
 	void delete_data(const int& number);//не готово
 
-	size_t size_visitors();
+	size_t size_visitors() const;
 };
