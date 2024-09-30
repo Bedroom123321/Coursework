@@ -21,7 +21,7 @@ list_of_visitors case1_enter(list_of_visitors list)
 	return list;
 }
 
-void case2_show(list_of_visitors list)
+void case2_show(list_of_visitors const&list)
 {
 	cout << "Visitor's data:\n";
 	for (int i=0; i < list.size_visitors(); i++)
