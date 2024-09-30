@@ -8,7 +8,7 @@ using std::string;
 
 int main()
 {
-	list_of_visitors list;
+	list_of_visitors list; 
 	int operation_number;
 
 	while (true)
@@ -22,7 +22,7 @@ int main()
 		switch (operation_number)
 		{
 		case 1:
-			case1_enter(list);
+			list = case1_enter(list);
 			break;
 
 		case 2:
@@ -30,11 +30,11 @@ int main()
 		    break;
 
 		case 3:
-			case3_change(list);
+			list = case3_change(list);
 			break;
 
 		case 4:
-			case4_delete(list);
+			list = case4_delete(list);
 			break;
 
 		default:

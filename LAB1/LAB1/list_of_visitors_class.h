@@ -1,18 +1,19 @@
 #pragma once
+#include <vector>
 #include "visitor_class.h" 
 
 using std::string;
+using std::vector;
 
 class list_of_visitors
 {
 private:
 
-	int number_of_visitors = 100;
-	visitor* visitors = new visitor[number_of_visitors];
+	vector<visitor> visitors;
 
 public:
 
-	void add_data( const int& num, const string& v_name);//работает
+	void add_data(const string& v_name);//работает
 
 	void print_data(const int& number) const;//работает 
 
@@ -20,4 +21,5 @@ public:
 
 	void delete_data(const int& number);//не готово
 
+	size_t size_visitors();
 };

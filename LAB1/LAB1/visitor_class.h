@@ -1,6 +1,5 @@
 #pragma once
 #include <iostream> 
-
 using std::string;
 
 class visitor
@@ -13,7 +12,9 @@ public:
 
 	string get_name() const;//готово
 
-	void set_name(const string& vis_name);//готово
+	visitor (const string& vis_name);//готово
+
+	void set_name(const string& vis_name);
 
 	void print_name() const;//готово
 

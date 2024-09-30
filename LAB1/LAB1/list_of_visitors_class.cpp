@@ -1,13 +1,13 @@
 #include "list_of_visitors_class.h" 
 
-void list_of_visitors:: add_data(const int&num,const string& v_name)
+void list_of_visitors:: add_data(const string& v_name) 
 {
-	visitors[num].set_name(v_name);
+	visitors.emplace_back(v_name);
 }
 
 void list_of_visitors:: print_data(const int& number) const
 {
-	visitors[number].print_name();
+	visitors[number].print_name(); 
 }
 
 void list_of_visitors:: chang_data(const int& number, const string& new_name)
@@ -17,17 +17,11 @@ void list_of_visitors:: chang_data(const int& number, const string& new_name)
 
 void list_of_visitors:: delete_data(const int& number)
 {
-	auto* new_visitors = new visitor[number_of_visitors];
-
-	for (int i = 0, j = 0; i < number_of_visitors; ++i)
-	{
-		if (i != number)
-		{
-			new_visitors[j++] = visitors[i];
-		}
-	}
-
-	delete [] visitors;
-	visitors = new_visitors;
+	auto iter = visitors.begin();
+	visitors.erase(iter + number - 1);
 }
 
+size_t list_of_visitors::size_visitors()
+{
+	return visitors.size();
+}
