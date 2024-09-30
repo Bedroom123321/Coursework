@@ -12,6 +12,8 @@ public:
 
 	string get_name() const;//готово
 
+	explicit visitor(const string& vis_name);
+
 	void set_name(const string& vis_name);
 
 	void print_name() const;//готово
