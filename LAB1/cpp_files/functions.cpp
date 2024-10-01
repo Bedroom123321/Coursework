@@ -17,7 +17,6 @@ List_of_visitors case1_enter(List_of_visitors list)
     cin >> vis_name;
 
     list.add_data(vis_name);
-    /*system("cls");*/
     cout<<"\n\n";
     return list;
 }
@@ -31,8 +30,6 @@ void case2_show(List_of_visitors const&list)
         list.print_data(i);
         cout <<"\n";
     }
-   /* cin.ignore();
-    system("cls");*/
     cout<<"\n\n";
 }
 
@@ -64,7 +61,6 @@ List_of_visitors case4_delete(List_of_visitors list)
     cin >> vis_num;
 
     list.delete_data(vis_num);
-    /*system("cls");*/
     cout<<"\n\n";
     return list;
 }

@@ -17,8 +17,6 @@ int main()
         print_menu();
 
         cin >> operation_number;
-        /*cin.ignore();
-        system("cls");*/
         cout<<"\n";
         switch (operation_number)
         {
