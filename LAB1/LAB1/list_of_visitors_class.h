@@ -13,13 +13,13 @@ private:
 
 public:
 
-	void add_data(const string& v_name);//работает
+	void add_data(const string& v_name);
 
-	void print_data(const int& number) const;//работает 
+	void print_data(const int& number) const;
 
-	void chang_data(const int& number,const string& new_name);//работает
+	void chang_data(const int& number,const string& new_name);
 
-	void delete_data(const int& number);//не готово
+	void delete_data(const int& number);
 
 	size_t size_visitors() const;
 };

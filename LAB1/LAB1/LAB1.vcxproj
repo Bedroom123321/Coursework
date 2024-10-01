@@ -127,9 +127,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
     <ClCompile Include="functions.cpp" />
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="list_of_visitors_class.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="visitor_class.cpp" />
   </ItemGroup>
   <ItemGroup>
