@@ -1,0 +1,13 @@
+# ninja log v6
+11	956	7495172590643496	CMakeFiles/LAB1.dir/functions.cpp.obj	7b4d297930977215
+1064	1234	7495173547785251	LAB1.exe	6b64d1263daf44f2
+29	1086	7495161040007802	CMakeFiles/LAB1.dir/visitor_class.cpp.obj	7314c77f56e7f01c
+3	372	7495177953155281	build.ninja	c52d2b5e2f3f285c
+27	1185	7495161485634541	CMakeFiles/LAB1.dir/list_of_visitors_class.cpp.obj	7fc3a395c1023eeb
+7	1064	7495173537213468	CMakeFiles/LAB1.dir/main.cpp.obj	98e455de578da5b5
+2	360	7495177953155281	build.ninja	c52d2b5e2f3f285c
+33	950	7495177954535288	CMakeFiles/LAB1.dir/cpp_files/visitor_class.cpp.obj	351ad7dacde71dbc
+23	989	7495177954435311	CMakeFiles/LAB1.dir/cpp_files/functions.cpp.obj	104170ae34a7f264
+19	1070	7495177954395256	CMakeFiles/LAB1.dir/cpp_files/main.cpp.obj	9cd56485c3b800ed
+27	1121	7495177954475553	CMakeFiles/LAB1.dir/cpp_files/list_of_visitors_class.cpp.obj	174f4a593d689a2d
+1121	1284	7495177965416713	LAB1.exe	55f60287a4ba4b96

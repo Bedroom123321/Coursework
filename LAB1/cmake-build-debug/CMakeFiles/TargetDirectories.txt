@@ -1,0 +1,3 @@
+D:/Git_2_course/Coursework/LAB1/cmake-build-debug/CMakeFiles/LAB1.dir
+D:/Git_2_course/Coursework/LAB1/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Git_2_course/Coursework/LAB1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
