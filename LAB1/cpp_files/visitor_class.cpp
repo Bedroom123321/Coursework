@@ -7,7 +7,7 @@ std::string Visitor::get_name() const
 
 Visitor::Visitor(const string& vis_name):name(vis_name){}
 
-void Visitor :: set_name(const string& vis_name)
+void Visitor :: set_name( string_view vis_name)
 {
     name = vis_name;
 }

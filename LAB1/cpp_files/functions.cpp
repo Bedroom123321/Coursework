@@ -49,7 +49,6 @@ List_of_visitors case3_change(List_of_visitors list)
     cin >> new_name;
 
     list.chang_data(number,new_name);
-    /*system("cls");*/
     cout<<"\n\n";
     return list;
 }

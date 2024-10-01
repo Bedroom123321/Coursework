@@ -4,6 +4,7 @@
 
 #include <iostream>
 using std::string;
+using std::string_view;
 
 class Visitor
 {
@@ -17,7 +18,7 @@ public:
 
     explicit Visitor(const string& vis_name);
 
-    void set_name(const string& vis_name);
+    void set_name(string_view vis_name);
 
     void print_name() const;
 
