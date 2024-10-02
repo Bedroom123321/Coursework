@@ -1,5 +1,6 @@
 #include <iostream>
 #include "../header_files/functions.h"
+#include <limits>
 
 using std::cout;
 using std::cin;
@@ -15,7 +16,13 @@ int main()
         print_menu();
 
         cin >> operation_number;
-        cout<<"\n";
+        if (std::cin.fail())
+        {
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+            cout<<"\n";
+        }
+        
         switch (operation_number)
         {
             case 1:

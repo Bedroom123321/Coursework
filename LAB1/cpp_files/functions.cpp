@@ -30,7 +30,8 @@ void case2_show(List_of_visitors const&list)
         list.print_data(i);
         cout <<"\n";
     }
-    cout<<"\n\n";
+    cin.ignore();
+    cout<<"\n";
 }
 
 List_of_visitors case3_change(List_of_visitors list)
