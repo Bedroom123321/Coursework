@@ -1,6 +1,5 @@
 #include <iostream>
 #include "../header_files/functions.h"
-#include "../header_files/list_of_visitors_class.h"
 
 using std::cout;
 using std::cin;

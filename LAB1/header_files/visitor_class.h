@@ -1,8 +1,7 @@
 #ifndef VISITOR_CLASS_H
 #define VISITOR_CLASS_H
-
-
 #include <iostream>
+
 using std::string;
 using std::string_view;
 
@@ -24,4 +23,5 @@ public:
 
 
 };
+
 #endif

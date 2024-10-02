@@ -24,4 +24,5 @@ public:
 
     [[nodiscard]] size_t size_visitors() const;
 };
+
 #endif
