@@ -14,7 +14,7 @@ private:
 
 public:
 
-    string get_name() const;
+    [[nodiscard]] string get_name() const;
 
     explicit Visitor(const string& vis_name);
 

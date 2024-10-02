@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cstdlib>
 #include "../header_files/functions.h"
 #include "../header_files/list_of_visitors_class.h"
 

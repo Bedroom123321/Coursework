@@ -22,6 +22,6 @@ public:
 
     void delete_data(const int& number);
 
-    size_t size_visitors() const;
+    [[nodiscard]] size_t size_visitors() const;
 };
 #endif
