@@ -20,8 +20,6 @@ public:
     void set_name(string_view vis_name);
 
     void print_name() const;
-
-
 };
 
 #endif

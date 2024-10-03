@@ -16,10 +16,10 @@ int main()
         print_menu();
 
         cin >> operation_number;
-        if (std::cin.fail())
+        if (cin.fail())
         {
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+            cin.clear();
+            cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
             cout<<"\n";
         }
         

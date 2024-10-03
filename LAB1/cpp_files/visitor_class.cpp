@@ -1,6 +1,6 @@
 #include "../header_files/visitor_class.h"
 
-std::string Visitor::get_name() const
+string Visitor::get_name() const
 {
     return name;
 }

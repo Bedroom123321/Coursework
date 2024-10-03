@@ -2,10 +2,10 @@
 
 void print_menu()
 {
-    cout<< "1)Enter visitor data \n"
-        << "2)Show visitor data \n"
-        << "3)Change visitor name \n"
-        << "4)Delete visitor data \n"
+    cout<< "1)Enter visitor's data \n"
+        << "2)Show visitor's data \n"
+        << "3)Change visitor's name \n"
+        << "4)Delete visitor's data \n"
         << "Choose operation: ";
 }
 
@@ -36,7 +36,7 @@ void case2_show(List_of_visitors const&list)
 
 List_of_visitors case3_change(List_of_visitors list)
 {
-    cout << "Enter visitor's number to change data\n";
+    cout << "Enter visitor's number to change data:\n";
     int number;
     cin >> number;
     --number;
@@ -56,7 +56,7 @@ List_of_visitors case3_change(List_of_visitors list)
 
 List_of_visitors case4_delete(List_of_visitors list)
 {
-    cout << "Enter visitor's number to delete data\n";
+    cout << "Enter visitor's number to delete data:\n";
     int vis_num;
     cin >> vis_num;
 
