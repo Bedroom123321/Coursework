@@ -27,3 +27,5 @@
 
 - Ситема входа для администратора 
 
+Ссылка на сонар:
+https://sonarcloud.io/project/overview?id=Bedroom123321_coursework
