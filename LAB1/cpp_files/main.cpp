@@ -22,7 +22,9 @@ int main()
             cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
             cout<<"\n";
         }
-        
+
+        cout<<'\n';
+
         switch (operation_number)
         {
             case 1:
