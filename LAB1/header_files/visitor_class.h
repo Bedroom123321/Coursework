@@ -3,7 +3,7 @@
 #include <iostream>
 
 using std::string;
-using std::string_view; 
+using std::string_view;
 
 class Visitor
 {
