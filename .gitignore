@@ -40,4 +40,3 @@ x64/
 .idea/
 cmake-build-debug/
 CMakeLists/
-SQLITE/
