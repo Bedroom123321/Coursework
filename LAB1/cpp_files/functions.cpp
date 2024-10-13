@@ -30,9 +30,10 @@ void print_menu()
 List_of_orders case1_make(List_of_orders list)
 {
     cout << "Введите данные посетителя:\n";
-    string vis_name,ph_number;
+    string vis_name;
     cout<<"Введите имя: ";
     std::cin>>vis_name;
+    string ph_number;
     cout<<"Введите номер телефона: ";
     cin>>ph_number;
 
@@ -49,8 +50,9 @@ void case2_show(List_of_orders const&list)
     cout << "Введите номер заказа, чтобы просмотреть его:\n";
     int number;
     cin>>number;
+    --number;
 
-    list.print_data(--number);
+    list.print_data(number);
     cout <<"\n";
 
     cin.ignore();
@@ -62,9 +64,10 @@ List_of_orders case3_change(List_of_orders list)
     cout << "Введите номер заказа, чтобы изменить данные:\n";
     int number;
     cin>>number;
+    --number;
 
     cout << "Данные заказа: ";
-    list.print_data(--number);
+    list.print_data(number);
     cout << "\n";
 
     cout<< "1)Изменить имя посетителя\n"
@@ -79,7 +82,7 @@ List_of_orders case3_change(List_of_orders list)
             cout << "Введите новое имя: ";
             string new_name;
             cin >> new_name;
-            list.chang_data(--number,new_name);//изменить
+            list.chang_data(number,new_name);//изменить
         }
             break;
 
@@ -88,7 +91,7 @@ List_of_orders case3_change(List_of_orders list)
             cout << "Введите новый номер телефона: ";
             string new_phnumber;
             cin >> new_phnumber;
-            list.chang_data(--number,new_phnumber);//изменить
+            list.chang_data(number,new_phnumber);//изменить
         }
             break;
 
@@ -109,8 +112,9 @@ List_of_orders case4_delete(List_of_orders list)
     cout << "Введите номер закака, чтобы удалить его:\n";
     int number;
     cin>>number;
+    --number;
 
-    list.delete_data(--number);
+    list.delete_data(number);
     cout<<"\n\n";
     return list;
 }//ГОТОВА
