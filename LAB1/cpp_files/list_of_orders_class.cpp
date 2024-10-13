@@ -11,9 +11,9 @@ void List_of_orders:: print_data(const int& number) const
     orders[number].print_order();
 }//готова
 
-void List_of_orders:: chang_data(const int& number, const string& new_name)
+void List_of_orders:: chang_data(const int& number, string_view new_name)const
 {
-   /* orders[number].set_name(new_name);*/
+
 }
 
 void List_of_orders:: delete_data(const int& number)

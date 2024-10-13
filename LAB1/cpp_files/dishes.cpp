@@ -29,7 +29,7 @@ vector<string> dishes;
     {
         int i;
         cin>>i;
-        if(i!=10) { dishes.emplace_back(dish_menu[i--].dish); }
+        if(i!=10) {--i; dishes.emplace_back(dish_menu[i].dish); }
         else break;
     }
 

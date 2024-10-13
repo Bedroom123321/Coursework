@@ -20,7 +20,7 @@ public:
 
     void print_data(const int& number) const;
 
-    void chang_data(const int& number,const string& new_name);
+    void chang_data(const int& number,string_view new_name) const;
 
     void delete_data(const int& number);
 

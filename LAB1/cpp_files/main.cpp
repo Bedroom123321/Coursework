@@ -12,7 +12,6 @@ int main()
   setlocale(LC_ALL, "ru_RU.UTF-8");
   
     List_of_orders list;
-    int operation_number;
 
     while (true)
     {
