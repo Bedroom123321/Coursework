@@ -1,6 +1,7 @@
+#include <locale>
 #include <iostream>
 #include "../header_files/functions.h"
-#include <limits>
+#include "..\SQLITE\sqlite3.h"
 
 using std::cout;
 using std::cin;
@@ -8,25 +9,19 @@ using std::string;
 
 int main()
 {
-    List_of_visitors list;
+  setlocale(LC_ALL, "ru_RU.UTF-8");
+  
+    List_of_orders list;
     int operation_number;
 
     while (true)
     {
         print_menu();
 
-        cin >> operation_number;
-        if (cin.fail())
-        {
-            cin.clear();
-            cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
-            cout<<"\n";
-        }
-        
-        switch (operation_number)
+        switch (checking_operation_number())
         {
             case 1:
-                list = case1_enter(list);
+                list = case1_make(list);
                 break;
 
             case 2:
@@ -42,8 +37,35 @@ int main()
                 break;
 
             default:
-                cout << "Enter correct number! \n\n";
+                cout << "Введите корректный номер! \n\n";
                 break;
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

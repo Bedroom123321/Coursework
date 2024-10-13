@@ -1,20 +1,22 @@
 #ifndef LIST_OF_VISITORS_H
 #define LIST_OF_VISITORS_H
 #include <vector>
-#include "visitor_class.h"
+
+#include "order_class.h"
+#include "../header_files/visitor_class.h"
 
 using std::string;
 using std::vector;
 
-class List_of_visitors
+class List_of_orders
 {
 private:
 
-    vector<Visitor> visitors;
+    vector<Order> orders;
 
 public:
 
-    void add_data(const string& v_name);
+    void add_data(const string& v_name,const string& ph_number,const vector<string>& items,float f_cost);
 
     void print_data(const int& number) const;
 

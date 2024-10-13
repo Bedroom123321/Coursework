@@ -1,15 +1,17 @@
-#include "list_of_visitors_class.h"
+#include "list_of_orders_class.h"
 
 using std::cout;
 using std::cin;
 using std::string;
 
+int checking_operation_number();
+
 void print_menu();
 
-List_of_visitors case1_enter(List_of_visitors list);
+List_of_orders case1_make(List_of_orders list);
 
-void case2_show(List_of_visitors const& list);
+void case2_show(List_of_orders const& list);
 
-List_of_visitors case3_change(List_of_visitors list);
+List_of_orders case3_change(List_of_orders list);
 
-List_of_visitors case4_delete(List_of_visitors list);
+List_of_orders case4_delete(List_of_orders list);
