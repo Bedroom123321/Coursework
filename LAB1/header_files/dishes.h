@@ -16,7 +16,6 @@ struct dishes
     double cost;
 };
 
-int callback(void* data, int colum_count,char** columns, char** colum_name);
 vector<string> dish_menu();
 
 #endif

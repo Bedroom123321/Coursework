@@ -1,13 +1,5 @@
 #include "../header_files/dishes.h"
 
-int callback(void* data, int colum_count,char** columns, char** colum_name)
-{
-    static int num=0;
-    ++num;
-    std::cout << num <<") "<< columns[0] << std::endl;
-    return 0;
-}
-
 vector<string> dish_menu()
 {
 sqlite3* database;
