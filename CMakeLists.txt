@@ -20,4 +20,6 @@ add_executable(LAB1 LAB1/cpp_files/main.cpp ${SQLITE3_SOURCES}
         LAB1/header_files/visitor_class.h
         LAB1/cpp_files/order_class.cpp
         LAB1/header_files/order_class.h
+        LAB1/cpp_files/dishes_class.cpp
+        LAB1/header_files/dishes_class.h
 )

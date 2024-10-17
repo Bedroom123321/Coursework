@@ -19,7 +19,7 @@ void Visitor :: set_name( string_view vis_name)
 
 void Visitor :: set_number( string_view phone)
 {
-    name = phone;
+    phone_number = phone;
 }
 
 void Visitor:: print_visitor() const

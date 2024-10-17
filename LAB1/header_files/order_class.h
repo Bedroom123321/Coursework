@@ -1,7 +1,9 @@
 #ifndef LAB1_ORDER_CLASS_H
 #define LAB1_ORDER_CLASS_H
 
+#include "../header_files/dishes.h"
 #include "visitor_class.h"
+
 #include <vector>
 
 using std::string;
@@ -14,16 +16,14 @@ class Order
 private:
 
     Visitor data;
-    vector<string> list_of_dishes;
-    float cost;
+    Dishes dishes_list;
 
 public:
-    Order(const string& vis_name,const string& phone,const vector<string>& items,const float& full_cost);
-    void set_vis_data(string_view vis_name,string_view phone_number);
-    void set_dishes(string_view dish, float full_cost);
+    Order(const string& vis_name,const string& phone,const vector<string>& items,double full_cost);
+    void set_dishes_list();
+    void set_vis_name(string_view vis_name);
+    void set_vis_phnumber(string_view phone_number);
     void print_order()const;
-    [[nodiscard]] float get_cost() const;
-    [[nodiscard]] string get_dish_from_list(int i) const;
-    [[nodiscard]] size_t size_orders() const;
+    [[nodiscard]] double get_cost() const;
 };
 #endif

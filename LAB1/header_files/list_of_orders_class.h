@@ -16,7 +16,7 @@ private:
 
 public:
 
-    void add_data(const string& v_name,const string& ph_number,const vector<string>& items,float f_cost);
+    void add_data(const string& v_name,const string& ph_number,const vector<string>& items,double f_cost);
 
     void print_data(const int& number) const;
 

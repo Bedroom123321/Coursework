@@ -11,7 +11,7 @@ int main()
 {
   setlocale(LC_ALL, "ru_RU.UTF-8");
   
-    List_of_orders list;
+    vector<Order> list_of_orders;
 
     while (true)
     {
@@ -20,19 +20,19 @@ int main()
         switch (checking_operation_number())
         {
             case 1:
-                list = case1_make(list);
+                list_of_orders = case1_make(list_of_orders);
                 break;
 
             case 2:
-                case2_show(list);
+                case2_show(list_of_orders);
                 break;
 
             case 3:
-                list = case3_change(list);
+                list_of_orders = case3_change(list_of_orders);
                 break;
 
             case 4:
-                list = case4_delete(list);
+                list_of_orders = case4_delete(list_of_orders);
                 break;
 
             default:

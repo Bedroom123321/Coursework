@@ -3,19 +3,20 @@
 
 #include <iostream>
 #include "..\SQLITE\sqlite3.h"
+#include "../header_files/dishes_class.h"
 #include <vector>
+
 
 using std::string;
 using std::vector;
 using std::cout;
 using std::cin;
 
-struct dishes
+struct dish
 {
-    string dish;
+    string dish_name;
     double cost;
 };
 
-vector<string> dish_menu();
-
+Dishes dish_menu(Dishes buf);
 #endif

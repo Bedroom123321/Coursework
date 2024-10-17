@@ -1,43 +1,31 @@
 #include "../header_files/order_class.h"
 
-Order::Order(const string& vis_name,const string& phone,const vector<string>& items,const float& full_cost): data(vis_name,phone), list_of_dishes(items),cost(full_cost){}
+Order::Order(const string& vis_name,const string& phone,const vector<string>& items,double full_cost): data(vis_name,phone), dishes_list(items,full_cost){}
 
-void Order:: set_vis_data(string_view vis_name,string_view phone_number)
+void Order:: set_dishes_list()
+{
+    dishes_list=dish_menu(dishes_list);
+}
+
+void Order:: set_vis_name(string_view vis_name)
 {
     data.set_name(vis_name);
+}
+
+void Order:: set_vis_phnumber(string_view phone_number)
+{
     data.set_number(phone_number);
 }
 
-void Order:: set_dishes(string_view dish, float full_cost)
+double Order:: get_cost() const
 {
-    list_of_dishes.emplace_back(dish);
-    cost=full_cost;
-}
-
-float Order:: get_cost() const
-{
-    return cost;
-}
-
-string Order:: get_dish_from_list(int i) const
-{
-    return list_of_dishes[i];
-}
-
-size_t Order::size_orders() const
-{
-    return list_of_dishes.size();
+    return dishes_list.get_full_cost();
 }
 
 void Order:: print_order() const
 {
     cout<<"***************\n"<<"ДАННЫЕ О ЗАКАЗЕ:\n";
     data.print_visitor();
-
-    cout<<"Выбранные блюда: \n";
-    for (int i=0;i<size_orders();++i)
-        cout<<i+1<<')'<<get_dish_from_list(i) <<'\n';
-
-    cout<<"\nОбщая стоимость: "<<get_cost()<<'\n';
+    dishes_list.print_dishes();
     cout<<"***************\n";
 }

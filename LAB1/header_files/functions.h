@@ -1,4 +1,5 @@
 #include "list_of_orders_class.h"
+#include "../header_files/order_class.h"
 
 using std::cout;
 using std::cin;
@@ -8,10 +9,10 @@ int checking_operation_number();
 
 void print_menu();
 
-List_of_orders case1_make(List_of_orders list);
+vector<Order> case1_make(vector<Order> list);
 
-void case2_show(List_of_orders const& list);
+void case2_show(vector<Order> const& list);
 
-List_of_orders case3_change(List_of_orders list);
+vector<Order> case3_change(vector<Order> list);
 
-List_of_orders case4_delete(List_of_orders list);
+vector<Order> case4_delete(vector<Order> list);
