@@ -1,6 +1,24 @@
 #include "../header_files/dishes_class.h"
+#include <sstream>
 
 Dishes:: Dishes(const vector<string>& dish_names,const double& dish_cost):list_of_dishes(dish_names),full_cost(dish_cost){}
+
+void Dishes::delete_dish()
+{
+    while (true)
+    {
+        int i;
+        cin>>i;
+        if (i!=0)
+        {
+            --i;
+            auto iter = list_of_dishes.begin();
+            list_of_dishes.erase(iter + i );
+        }
+        else break;
+    }
+    std::cin.ignore();
+}
 
 void Dishes:: set_dish(const string& dish)
 {

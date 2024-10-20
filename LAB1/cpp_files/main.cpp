@@ -10,7 +10,7 @@ using std::string;
 int main()
 {
   setlocale(LC_ALL, "ru_RU.UTF-8");
-  
+
     vector<Order> list_of_orders;
 
     while (true)

@@ -20,10 +20,10 @@ private:
 
 public:
     Order(const string& vis_name,const string& phone,const vector<string>& items,double full_cost);
-    void set_dishes_list();
+    void add_dishes_in_list();
+    void delete_dishes_from_list();
     void set_vis_name(string_view vis_name);
     void set_vis_phnumber(string_view phone_number);
     void print_order()const;
-    [[nodiscard]] double get_cost() const;
 };
 #endif

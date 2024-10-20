@@ -2,7 +2,12 @@
 
 Order::Order(const string& vis_name,const string& phone,const vector<string>& items,double full_cost): data(vis_name,phone), dishes_list(items,full_cost){}
 
-void Order:: set_dishes_list()
+void Order:: delete_dishes_from_list()
+{
+    dishes_list.delete_dish();
+}
+
+void Order:: add_dishes_in_list()
 {
     dishes_list=dish_menu(dishes_list);
 }
@@ -17,10 +22,6 @@ void Order:: set_vis_phnumber(string_view phone_number)
     data.set_number(phone_number);
 }
 
-double Order:: get_cost() const
-{
-    return dishes_list.get_full_cost();
-}
 
 void Order:: print_order() const
 {

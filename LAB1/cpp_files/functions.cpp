@@ -1,7 +1,6 @@
 #include "../header_files/functions.h"
 #include <limits>
 #include "..\SQLITE\sqlite3.h"
-#include "../header_files/dishes.h"
 #include <string>
 
 int checking_operation_number()
@@ -42,7 +41,7 @@ vector<Order> case1_make(vector<Order> list)
     Dishes buffer;
     buffer=dish_menu(buffer);
 
-    list.emplace_back(vis_name, ph_number, buffer.get_list(), buffer.get_full_cost());//изменить
+    list.emplace_back(vis_name, ph_number, buffer.get_list(), buffer.get_full_cost());
 
     cout<<"\n\n";
     return list;
@@ -74,7 +73,8 @@ vector<Order> case3_change(vector<Order> list)
 
     cout<< "1)Изменить имя посетителя\n"
         << "2)Изменить номер телефона \n"
-        << "3)Изменить позиции блюд в закзазе \n"
+        << "3)Добавить позиции в закзаз \n"
+        << "4)Удалить позиции из заказа"
         << "Выберите операцию: ";
 
     int operation=checking_operation_number();
@@ -100,8 +100,13 @@ vector<Order> case3_change(vector<Order> list)
             break;
 
         case 3:
-            list[number].set_dishes_list();
-            
+            list[number].add_dishes_in_list();
+            break;
+
+        case 4:
+        {
+            list[number].delete_dishes_from_list();
+        }
             break;
 
         default:

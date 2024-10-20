@@ -1,4 +1,3 @@
-#include "list_of_orders_class.h"
 #include "../header_files/order_class.h"
 
 using std::cout;

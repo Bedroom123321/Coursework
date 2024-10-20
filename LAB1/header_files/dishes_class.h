@@ -17,6 +17,7 @@ private:
 public:
     Dishes()=default;
     Dishes(const vector<string>& dish_names,const double& dish_cost);
+    void delete_dish();
     void set_dish(const string& dish);
     void set_cost(const double& cost);
     [[nodiscard]] vector<string> get_list()const;
