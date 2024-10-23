@@ -33,7 +33,7 @@ public:
 
     [[nodiscard]] vector<string> get_list_of_dishes() const;
 
-    bool operator == (const string& name);
+    bool operator == (string_view name) const ;
 
     void  reduce_full_cost(const int& number);
 };

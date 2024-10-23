@@ -20,7 +20,7 @@ public:
 
     Dishes(const vector<string>& dish_names,const vector<double>& dish_costs,const double& dish_cost);
 
-    void delete_dish(int& number);
+    void delete_dish(const int& number);
 
     void set_dish(const string& dish);
 

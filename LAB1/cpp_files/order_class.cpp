@@ -27,7 +27,7 @@ vector<string> Order:: get_list_of_dishes() const
     return dishes_list.get_list_of_dishes();
 }
 
-bool Order:: operator == (const string& name )
+bool Order:: operator == (string_view name ) const
 {
     return data.get_name() == name;
 }

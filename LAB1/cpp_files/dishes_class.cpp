@@ -3,7 +3,7 @@
 
 Dishes:: Dishes(const vector<string>& dish_names,const vector<double>& dish_costs,const double& dish_cost):list_of_dishes(dish_names),costs_of_dishes(dish_costs),full_cost(dish_cost){}
 
-void Dishes::delete_dish(int& number)
+void Dishes::delete_dish(const int& number)
 {
     auto iter1 = list_of_dishes.begin();
     list_of_dishes.erase(iter1 + number - 1);
