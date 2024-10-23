@@ -50,15 +50,18 @@ vector<Order> case1_make(vector<Order> list)
     cout<<"Введите имя:";
     string vis_name=enter_name_string();
 
-    if(list.empty() != 0)
+    int i=0;
+    if(!list.empty())
     {
-        for(int i=0; i<list.size(); ++i)
+        while(i<list.size() )
         {
             if(list[i] == vis_name)
             {
                 cout<<"Такое имя уже используется, введите другое"<<std::endl;
                 std::getline(std::cin, vis_name);
             }
+            else
+                i++;
         }
     }
 
@@ -98,64 +101,62 @@ vector<Order> case3_change(vector<Order> list)
     list[number].print_order();
     cout << "\n";
 
-    cout<< "1)Изменить имя посетителя\n"
-        << "2)Изменить номер телефона\n"
-        << "3)Добавить позиции в закзаз\n"
-        << "4)Удалить позиции из заказа\n"
-        << "5)Вернуться назад\n"
-        << "Выберите операцию: ";
+    int operation;
+do
+{
+    cout << "1)Изменить имя посетителя\n"
+         << "2)Изменить номер телефона\n"
+         << "3)Добавить позиции в закзаз\n"
+         << "4)Удалить позиции из заказа\n"
+         << "5)Вернуться назад\n"
+         << "Выберите операцию: ";
 
-    int operation=checking_operation_number();
+    operation = checking_operation_number();
 
-    switch(operation)
+    switch (operation)
     {
-        case 1:
-        {
+        case 1: {
             cout << "Введите новое имя: ";
-            string new_name=enter_name_string();
+            string new_name = enter_name_string();
 
             list[number].set_vis_name(new_name);
-        }break;
+        }
+            break;
 
-        case 2:
-        {
+        case 2: {
             cout << "Введите новый номер телефона: ";
             string new_phone_number;
             cin >> new_phone_number;
 
             list[number].set_vis_phone_number(new_phone_number);
-        }break;
+        }
+            break;
 
-        case 3:
-        {
+        case 3: {
             list[number].add_dishes_in_list();
-        }break;
+        }
+            break;
 
-        case 4:
-        {
+        case 4: {
             std::cin.ignore();
             string input;
             std::getline(std::cin, input);
 
             std::stringstream ss(input);
             int i;
-            while (ss >> i)
-            {
-                if (i>0 && i <= list[number].get_list_of_dishes().size())
-                {
-                    list = delete_dish(i,list, number);
-                }
-                else if(i>0)
-                {
-                    i-=1;
+            while (ss >> i) {
+                if (i > 0 && i <= list[number].get_list_of_dishes().size()) {
+                    list = delete_dish(i, list, number);
+                } else if (i > 0) {
+                    i -= 1;
                     if (i <= list[number].get_list_of_dishes().size())
-                    list = delete_dish(i,list, number );
+                        list = delete_dish(i, list, number);
                 }
             }
-        }break;
+        }
+            break;
 
-        case 5:
-        {
+        case 5: {
             return list;
         }
 
@@ -163,6 +164,7 @@ vector<Order> case3_change(vector<Order> list)
             cout << "Введите номер из списка! \n\n";
             break;
     }
+} while (operation!=5);
     cout<<"\n\n";
     return list;
 }
