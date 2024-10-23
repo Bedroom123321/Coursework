@@ -6,16 +6,16 @@ set(SQLITE3_DIR "${CMAKE_SOURCE_DIR}/LAB1/SQLITE")
 set(SQLITE3_SOURCES ${SQLITE3_DIR}/sqlite3.c)
 include_directories(${SQLITE3_DIR}/sqlite3.h)
 
-set(CMAKE_AUTOMOC ON)
+#[[set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
-set(CMAKE_PREFIX_PATH "D:\\Qt\\6.7.3\\mingw_64\\")
+set(CMAKE_PREFIX_PATH "D:\\Qt\\6.7.3\\mingw_64\\")]]
 
-find_package(Qt6 COMPONENTS
+#[[find_package(Qt6 COMPONENTS
         Core
         Gui
         Widgets
-        REQUIRED)
+        REQUIRED)]]
 
 add_executable(LAB1 LAB1/cpp_files/main.cpp ${SQLITE3_SOURCES}
         LAB1/cpp_files/functions.cpp
@@ -30,6 +30,7 @@ add_executable(LAB1 LAB1/cpp_files/main.cpp ${SQLITE3_SOURCES}
         LAB1/header_files/dishes.h
 )
 
+#[[
 target_link_libraries(LAB1
         Qt6::Core
         Qt6::Gui
@@ -62,4 +63,4 @@ if (WIN32 AND NOT DEFINED CMAKE_TOOLCHAIN_FILE)
                 "${QT_INSTALL_PATH}/bin/Qt6${QT_LIB}${DEBUG_SUFFIX}.dll"
                 "$<TARGET_FILE_DIR:${PROJECT_NAME}>")
     endforeach (QT_LIB)
-endif ()
+endif ()]]
