@@ -32,7 +32,7 @@ public:
 
     [[nodiscard]] double get_full_cost()const;
 
-    [[nodiscard]] double get_cost(int& number)const;
+    [[nodiscard]] double get_cost(const int& number)const;
 
     void print_dishes()const;
 

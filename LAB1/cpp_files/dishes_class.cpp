@@ -36,7 +36,7 @@ double Dishes:: get_full_cost()const
     return full_cost;
 }
 
-double Dishes:: get_cost(int& number)const
+double Dishes:: get_cost(const int& number)const
 {
     return costs_of_dishes[number];
 }

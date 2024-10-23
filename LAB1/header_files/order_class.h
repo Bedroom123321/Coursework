@@ -35,6 +35,6 @@ public:
 
     bool operator == (const string& name);
 
-    void  reduce_full_cost(int& number);
+    void  reduce_full_cost(const int& number);
 };
 #endif

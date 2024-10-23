@@ -41,7 +41,7 @@ vector<Order> case1_make(vector<Order> list)
     cout<<"Введите имя:";
     string vis_name=enter_name_string();
 
-    if(list.size() != 0)
+    if(list.empty() != 0)
     {
         for(int i=0; i<list.size(); ++i)
         {
@@ -134,12 +134,16 @@ vector<Order> case3_change(vector<Order> list)
             {
                 if (i>0 && i <= list[number].get_list_of_dishes().size())
                 {
-                    list[number].reduce_full_cost(--i);
+                    --i;
+                    list[number].reduce_full_cost(i);
+                    ++i;
                     list[number].delete_dish_from_order(i);
                 }
-                else if(i>0 && --i <=list[number].get_list_of_dishes().size())
+                else if(i>0 && (--i <=list[number].get_list_of_dishes().size()))
                 {
-                    list[number].reduce_full_cost(--i);
+                    --i;
+                    list[number].reduce_full_cost(i);
+                    ++i;
                     list[number].delete_dish_from_order(i);
                 }
             }

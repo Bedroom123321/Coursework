@@ -40,7 +40,7 @@ void Order:: print_order() const
     cout<<"***************\n";
 }
 
-void Order:: reduce_full_cost(int& number)
+void Order:: reduce_full_cost(const int& number)
 {
     dishes_list -= dishes_list.get_cost(number) ;
 }
