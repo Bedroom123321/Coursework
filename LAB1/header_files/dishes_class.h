@@ -13,17 +13,32 @@ class Dishes
 {
 private:
     vector<string> list_of_dishes;
+    vector<double> costs_of_dishes;
     double full_cost=0;
 public:
     Dishes()=default;
-    Dishes(const vector<string>& dish_names,const double& dish_cost);
-    void delete_dish();
-    void set_dish(const string& dish);
-    void set_cost(const double& cost);
-    [[nodiscard]] vector<string> get_list()const;
-    [[nodiscard]] double get_full_cost()const;
-    void print_dishes()const;
-};
 
+    Dishes(const vector<string>& dish_names,const vector<double>& dish_costs,const double& dish_cost);
+
+    void delete_dish(int& number);
+
+    void set_dish(const string& dish);
+
+    void set_costs(const double& cost);
+
+    [[nodiscard]] vector<string> get_list_of_dishes() const;
+
+    [[nodiscard]]  vector<double> get_list_of_costs() const;
+
+    [[nodiscard]] double get_full_cost()const;
+
+    [[nodiscard]] double get_cost(int& number)const;
+
+    void print_dishes()const;
+
+    void operator +=(const double& cost);
+
+    void operator -=(const double& cost);
+};
 
 #endif //LAB1_DISHES_CLASS_H

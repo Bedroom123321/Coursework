@@ -1,7 +1,6 @@
 #include <locale>
 #include <iostream>
 #include "../header_files/functions.h"
-#include "..\SQLITE\sqlite3.h"
 
 using std::cout;
 using std::cin;
@@ -9,15 +8,16 @@ using std::string;
 
 int main()
 {
-  setlocale(LC_ALL, "ru_RU.UTF-8");
+  setlocale(LC_ALL, "ru_RU.UTF-8"); 
 
     vector<Order> list_of_orders;
+    int operation;
 
-    while (true)
+    do
     {
         print_menu();
-
-        switch (checking_operation_number())
+        operation=checking_operation_number();
+        switch (operation)
         {
             case 1:
                 list_of_orders = case1_make(list_of_orders);
@@ -35,11 +35,15 @@ int main()
                 list_of_orders = case4_delete(list_of_orders);
                 break;
 
+            case 5:
+                cout<<"Программа закончила работу";
+                break;
+
             default:
-                cout << "Введите корректный номер! \n\n";
+                cout<<"Введите номер из списка!"<<std::endl;
                 break;
         }
-    }
+    }while(operation!=5);
 }
 
 

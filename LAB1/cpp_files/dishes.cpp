@@ -42,7 +42,8 @@ sqlite3_close(database);
         {
             --i;
             buf.set_dish(dish_menu[i].dish_name);
-            buf.set_cost(dish_menu[i].cost);
+            buf.set_costs(dish_menu[i].cost);
+            buf += dish_menu[i].cost;
         }
     }
     return buf ;

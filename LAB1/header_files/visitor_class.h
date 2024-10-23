@@ -24,6 +24,7 @@ public:
     void set_number( string_view phone);
 
     void print_visitor() const;
+
 };
 
 #endif

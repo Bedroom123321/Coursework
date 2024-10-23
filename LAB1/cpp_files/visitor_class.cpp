@@ -10,7 +10,7 @@ string Visitor::get_number() const
     return phone_number;
 }
 
-Visitor::Visitor(const string& vis_name,const string& phone):name(vis_name),phone_number(phone){}
+Visitor::Visitor(const string& vis_name, const string& phone):name(vis_name),phone_number(phone){}
 
 void Visitor :: set_name( string_view vis_name)
 {
