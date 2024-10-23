@@ -35,6 +35,15 @@ string enter_name_string()
     return name;
 }
 
+vector<Order> delete_dish(int index, vector<Order> list, int number )
+{
+    --index;
+    list[number].reduce_full_cost(index);
+    ++index;
+    list[number].delete_dish_from_order(index);
+    return list;
+}
+
 vector<Order> case1_make(vector<Order> list)
 {
     cout << "Введите данные посетителя:\n";
@@ -134,17 +143,13 @@ vector<Order> case3_change(vector<Order> list)
             {
                 if (i>0 && i <= list[number].get_list_of_dishes().size())
                 {
-                    --i;
-                    list[number].reduce_full_cost(i);
-                    ++i;
-                    list[number].delete_dish_from_order(i);
+                    list = delete_dish(i,list, number);
                 }
-                else if(i>0 && (--i <=list[number].get_list_of_dishes().size()))
+                else if(i>0)
                 {
-                    --i;
-                    list[number].reduce_full_cost(i);
-                    ++i;
-                    list[number].delete_dish_from_order(i);
+                    i-=1;
+                    if (i <= list[number].get_list_of_dishes().size())
+                    list = delete_dish(i,list, number );
                 }
             }
         }break;

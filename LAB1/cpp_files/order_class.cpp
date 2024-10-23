@@ -2,7 +2,7 @@
 
 Order::Order(const string& vis_name,const string& phone,const vector<string>& items,const vector<double>& dishes_costs,double full_cost): data(vis_name,phone), dishes_list(items,dishes_costs,full_cost){}
 
-void Order:: delete_dish_from_order(int& number)
+void Order:: delete_dish_from_order(const int& number)
 {
     dishes_list.delete_dish(number);
 }

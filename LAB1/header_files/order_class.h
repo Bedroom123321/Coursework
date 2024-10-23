@@ -23,7 +23,7 @@ public:
 
     void add_dishes_in_list();
 
-    void delete_dish_from_order(int& number);
+    void delete_dish_from_order(const int& number);
 
     void set_vis_name(string_view vis_name);
 
