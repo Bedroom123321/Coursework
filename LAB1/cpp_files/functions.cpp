@@ -35,12 +35,29 @@ string enter_name_string()
     return name;
 }
 
-vector<Order> delete_dish(int index, vector<Order> list, int number )
+vector<Order> delete_dish(vector<Order> list, int number )
 {
-    --index;
-    list[number].reduce_full_cost(index);
-    ++index;
-    list[number].delete_dish_from_order(index);
+    std::cin.ignore();
+    string input;
+    std::getline(std::cin, input);
+
+    std::stringstream ss(input);
+    int i;
+    while (ss >> i) {
+        if (i > 0 && i <= list[number].get_list_of_dishes().size()) {
+            --i;
+            list[number].reduce_full_cost(i);
+            ++i;
+            list[number].delete_dish_from_order(i);
+        } else if (i > 0) {
+            i -= 1;
+            if (i <= list[number].get_list_of_dishes().size())
+                --i;
+            list[number].reduce_full_cost(i);
+            ++i;
+            list[number].delete_dish_from_order(i);
+        }
+    }
     return list;
 }
 
@@ -138,21 +155,7 @@ do
             break;
 
         case 4: {
-            std::cin.ignore();
-            string input;
-            std::getline(std::cin, input);
-
-            std::stringstream ss(input);
-            int i;
-            while (ss >> i) {
-                if (i > 0 && i <= list[number].get_list_of_dishes().size()) {
-                    list = delete_dish(i, list, number);
-                } else if (i > 0) {
-                    i -= 1;
-                    if (i <= list[number].get_list_of_dishes().size())
-                        list = delete_dish(i, list, number);
-                }
-            }
+            list=delete_dish(list,number);
         }
             break;
 
