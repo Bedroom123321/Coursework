@@ -11,6 +11,7 @@ using std::cin;
 
 class Dishes
 {
+    friend Dishes dish_menu(Dishes buf);
 private:
     vector<string> list_of_dishes;
     vector<double> costs_of_dishes;

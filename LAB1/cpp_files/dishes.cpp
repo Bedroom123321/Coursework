@@ -41,8 +41,8 @@ sqlite3_close(database);
         if (i > 0 && i <= dish_menu.size())
         {
             --i;
-            buf.set_dish(dish_menu[i].dish_name);
-            buf.set_costs(dish_menu[i].cost);
+            buf.list_of_dishes.emplace_back(dish_menu[i].dish_name);
+            buf.costs_of_dishes.emplace_back(dish_menu[i].cost);
             buf += dish_menu[i].cost;
         }
     }
